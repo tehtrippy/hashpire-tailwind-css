@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import MenuOverlay from './MenuOverlay';
+import Link from '../../../Link';
 import { ListIcon } from '../../../Icon';
-import NavigationCollapse from './NavigationCollapse';
 import hashpireLogo from '../../../../assets/img/hashpire-logo.png';
-import { Link } from 'react-router-dom';
 
 interface IMobileNavbar {
   leftItems: { name: string; path: string }[];
@@ -17,9 +16,7 @@ const MobileNavbar: React.FC<IMobileNavbar> = ({ leftItems }) => {
         {/* Left Items */}
         <div className='flex items-center'>
           <ListIcon theme='secondary' onClick={() => setShow(true)} />
-          <Link to='/' className='ml-4'>
-            <img src={hashpireLogo} alt='hashpire logo' className='w-36' />
-          </Link>
+          <img src={hashpireLogo} alt='hashpire logo' className='w-36 ml-4' />
         </div>
       </div>
 
@@ -31,16 +28,11 @@ const MobileNavbar: React.FC<IMobileNavbar> = ({ leftItems }) => {
         }
         handleShowMenu={(open) => setShow(open)}
       >
-        <>
-          <NavigationCollapse className='px-2' />
-          <div className='flex flex-col space-y-6 px-6 pt-4 text-base font-semibold text-neutral-2'>
-            {leftItems.map((item, key) => (
-              <Link to={item.path} key={key}>
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </>
+        <div className='inline-flex flex-col items-start space-y-6 px-6 pt-4 text-base font-semibold text-neutral-2'>
+          {leftItems.map((item, key) => (
+            <Link title={item.name} path={item.path} key={key} />
+          ))}
+        </div>
       </MenuOverlay>
     </div>
   );

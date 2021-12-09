@@ -8,19 +8,20 @@ export interface IGardenLayout {
   leftContent?: React.ReactNode;
   right75Content?: React.ReactNode;
   right25Content?: React.ReactNode;
+  mobileContent?: React.ReactNode;
 }
 
 const GardenLayout: React.FC<IGardenLayout> = ({
   leftContent,
   right75Content,
   right25Content,
-  children,
+  mobileContent,
 }) => {
   return (
-    <div>
-      <div className='hidden lg:block'>
+    <>
+      <div className='hidden lg:flex h-full flex-col'>
         <Navbar />
-        <div className='flex'>
+        <div className='flex flex-grow overflow-auto bg-red-500'>
           <LeftContent>{leftContent}</LeftContent>
           <RightCotnent
             right25Content={right25Content}
@@ -29,9 +30,9 @@ const GardenLayout: React.FC<IGardenLayout> = ({
         </div>
       </div>
       <div className='block lg:hidden'>
-        <Layout>{children}</Layout>
+        <Layout>{mobileContent}</Layout>
       </div>
-    </div>
+    </>
   );
 };
 

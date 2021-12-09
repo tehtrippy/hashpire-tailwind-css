@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from '../../../../Link';
 import { Menu } from '@headlessui/react';
 import { CaretDownIcon } from '../../../../Icon';
 
@@ -28,12 +28,7 @@ const DropdownMenu: React.FC<IDropdownMenu> = ({ menu }) => {
       <Menu.Items className='absolute left-0 w-40 mt-5 p-3 bg-primary-light rounded-lg shadow-popup'>
         {menuItem.map((item, key) => (
           <Menu.Item key={key}>
-            <Link
-              to={item.path || '/'}
-              className='block px-3 py-1.5 hover:bg-primary rounded hover:text-accent'
-            >
-              {item.title}
-            </Link>
+            <Link title={item.title} path={item.path} />
           </Menu.Item>
         ))}
       </Menu.Items>

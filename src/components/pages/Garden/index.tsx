@@ -1,6 +1,6 @@
 import React from 'react';
 import Hashtag from '../../../components/Hashtag';
-import { GardenLayout, SidePanelFooter } from '../../layouts';
+import { GardenLayout } from '../../layouts';
 
 const hashtags = [
   'Web3',
@@ -14,18 +14,11 @@ const hashtags = [
 const Garden: React.FC<{}> = () => {
   return (
     <GardenLayout
-      leftContent={
-        <div className='flex flex-col justify-between p-6 h-full'>
-          <div className='flex flex-wrap items-center'>
-            {hashtags.map((item, key) => (
-              <div className='mx-2 my-2' key={key}>
-                <Hashtag name={item} />
-              </div>
-            ))}
-          </div>
-          <SidePanelFooter className='p-2' />
+      leftContent={hashtags.map((item, key) => (
+        <div className='mx-2 my-2' key={key}>
+          <Hashtag name={item} />
         </div>
-      }
+      ))}
       right75Content={
         <div className='text-white'>
           Minim mollit ut est cupidatat laboris id eiusmod Lorem. Aliquip est
@@ -134,9 +127,8 @@ const Garden: React.FC<{}> = () => {
         </div>
       }
       right25Content={<div className='text-white'>Link to this page</div>}
-    >
-      <div className='p-6 bg-indigo-400'>Mobile Garden</div>
-    </GardenLayout>
+      mobileContent={<div className='p-6 bg-indigo-400'>Mobile Garden</div>}
+    />
   );
 };
 

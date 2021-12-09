@@ -3,7 +3,9 @@ import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
 
 const navbarLeftItems = [
-  { name: 'Learn', path: '/' },
+  { name: 'Articles', path: '/' },
+  { name: 'Knowledge-base', path: '/' },
+  { name: 'MOCs', path: '/' },
   { name: 'Community', path: '/' },
   { name: 'About', path: '/' },
 ];

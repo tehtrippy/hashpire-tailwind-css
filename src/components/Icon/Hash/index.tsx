@@ -1,7 +1,7 @@
 import React from 'react';
 import IconWrapper, { IIconWrapper } from '../IconWrapper';
 
-const Folder: React.FC<IIconWrapper> = ({ theme, size, href, className, onClick }) => {
+const Hash: React.FC<IIconWrapper> = ({ theme, size, href, className, onClick }) => {
   return (
     <IconWrapper className={className} href={href} size={size} theme={theme} onClick={onClick}>
       <path
@@ -12,4 +12,4 @@ const Folder: React.FC<IIconWrapper> = ({ theme, size, href, className, onClick 
   );
 };
 
-export default Folder;
+export default Hash;

@@ -1,6 +1,5 @@
 import React from 'react';
-import DropdownMenu from './DropdownMenu';
-import { Link } from 'react-router-dom';
+import Link from '../../../Link';
 import {
   GithubIcon,
   FacebookIcon,
@@ -19,19 +18,9 @@ const DesktopNavbar: React.FC<IDesktopNavbar> = ({ leftItems }) => {
     <div className='flex justify-between items-center px-6 h-16 bg-primary border-solid border-b border-neutral-4'>
       {/* Left Item */}
       <div className='flex space-x-10 items-center text-sm text-neutral-2'>
-        <Link to='/'>
-          <img src={HashpireLogo} alt='hashpire logo' className='w-28 pb-1.5' />
-        </Link>
-        <DropdownMenu
-          menu={{
-            title: 'GARDEN',
-            menuItem: [{ title: 'Articles' }, { title: 'Notes' }],
-          }}
-        />
+        <img src={HashpireLogo} alt='hashpire logo' className='w-28 pb-1.5' />
         {leftItems.map((item, key) => (
-          <div className='font-semibold' key={key}>
-            <Link to={item.path}>{item.name}</Link>
-          </div>
+          <Link title={item.name} path={item.path} key={key} />
         ))}
       </div>
       {/* Right Item */}

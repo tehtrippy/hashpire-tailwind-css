@@ -8,13 +8,11 @@ const RightContent: React.FC<IRightContent> = ({
   right75Content,
 }) => {
   return (
-    <div className='hidden lg:flex w-full bg-primary-light pt-6 pl-6 overflow-y-auto'>
-      <div className='w-full flex justify-center bg-red-500'>
-        <div className='max-w-5xl bg-green-300'>{right75Content}</div>
+    <div className='flex flex-grow pt-6 pl-6 bg-primary-light overflow-y-auto'>
+      <div className='flex-grow flex justify-center'>
+        <div className='max-w-5xl'>{right75Content}</div>
       </div>
-      <div className='w-1/4 max-w-xs bg-yellow-500'>
-        {right25Content}
-      </div>
+      <div className='flex-none w-1/4 max-w-xs'>{right25Content}</div>
     </div>
   );
 };
