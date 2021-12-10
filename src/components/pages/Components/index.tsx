@@ -18,6 +18,32 @@ import RelationToPage from '../../RelationToPage';
 import Tab from '../../Tab';
 import Search from '../../Search';
 import Header from '../../Header';
+import {
+  CaretDownIcon,
+  CaretLeftIcon,
+  CaretRightIcon,
+  CaretUpIcon,
+  CommunityIcon,
+  CrossIcon,
+  DiscoverIcon,
+  FacebookIcon,
+  FolderIcon,
+  GithubIcon,
+  HashIcon,
+  HomeIcon,
+  IdeaIcon,
+  InstagramIcon,
+  LeftPaneIcon,
+  RightPaneIcon,
+  LinkIcon,
+  ListIcon,
+  ListBulletIcon,
+  MailIcon,
+  MoreIcon,
+  TriangleDownIcon,
+  TriangleRightIcon,
+  TwitterIcon,
+} from '../../Icon';
 import { posts } from './posts';
 import { collapseToggle } from './collapseToggle';
 import { tableOfContents } from './tableOfContent';
@@ -410,6 +436,37 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         <Header title='📌 Feature MOCs' />
         <br />
         <Header title='📝 ALL NOTES' />
+      </div>
+      <div className='bg-gray-700 py-4 px-4'>
+        <span className='block text-accent text-2xl font-semibold mb-3'>
+          Icons
+        </span>
+        <div className='flex space-x-2'>
+          <CaretUpIcon />
+          <CaretDownIcon />
+          <CaretLeftIcon />
+          <CaretRightIcon />
+          <CrossIcon />
+          <HomeIcon />
+          <IdeaIcon />
+          <CommunityIcon />
+          <DiscoverIcon />
+          <FolderIcon />
+          <LeftPaneIcon />
+          <RightPaneIcon />
+          <LinkIcon />
+          <ListIcon />
+          <ListBulletIcon />
+          <MailIcon />
+          <MoreIcon />
+          <TriangleDownIcon />
+          <TriangleRightIcon />
+          <TwitterIcon />
+          <FacebookIcon />
+          <GithubIcon />
+          <InstagramIcon />
+          <HashIcon />
+        </div>
       </div>
     </div>
   );
