@@ -14,15 +14,9 @@ const hashtags = [
 const Garden: React.FC<{}> = () => {
   return (
     <GardenLayout
-      navbar={{
-        config: {
-          mobile: { tab: { active: 'home' } },
-          desktop: { active: 'home' },
-        },
-      }}
       leftContent={hashtags.map((item, key) => (
         <div className='mx-2 my-2' key={key}>
-          <Hashtag name={item} />
+          <Hashtag title={item} className='h-6 py-1 px-2.5 rounded-2xl' />
         </div>
       ))}
       right75Content={

@@ -7,7 +7,7 @@ const LeftContent: React.FC<{}> = ({ children }) => {
       <div className='flex flex-wrap content-start flex-grow overflow-auto'>
         {children}
       </div>
-      <SidePanelFooter className='p-2' />
+      <SidePanelFooter />
     </div>
   );
 };

@@ -23,6 +23,10 @@ import ListBulletIcon from './ListBullet';
 import LeftPaneIcon from './LeftPane';
 import RightPaneIcon from './RightPane';
 
+export interface Icon {
+  className?: string;
+}
+
 export {
   GithubIcon,
   FacebookIcon,

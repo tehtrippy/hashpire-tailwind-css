@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import ProfileImage from './ProfileImage';
 
 export interface IContributor {
   users: { displayName: string; profileImageUrl: string }[];
@@ -6,15 +7,14 @@ export interface IContributor {
 
 const Contributor: React.FC<IContributor> = ({ users }) => {
   const { profileImageUrl, displayName } = users[0];
-  const imageStyle = `w-7 h-7 rounded-full object-cover border border-neutral-1`;
   return (
     <>
       {users.length === 1 ? (
         <div className='flex items-center'>
-          <img
+          <ProfileImage
             src={profileImageUrl}
             alt={displayName}
-            className={`${imageStyle} mr-2`}
+            className='mr-2'
           />
           <span className='text-xs font-semibold text-neutral-1'>
             {displayName}
@@ -26,10 +26,10 @@ const Contributor: React.FC<IContributor> = ({ users }) => {
             return (
               key < 5 && (
                 <Fragment key={key}>
-                  <img
+                  <ProfileImage
                     src={user.profileImageUrl}
                     alt={user.displayName}
-                    className={`${imageStyle} ${key > 0 && '-ml-2'}`}
+                    className={key > 0 ? '-ml-2' : undefined}
                   />
                   {key === 4 && (
                     <div className='flex items-center justify-center relative w-7 h-7 bg-primary-light border border-neutral-1 rounded-full text-xs text-neutral-3 -ml-2'>
@@ -44,11 +44,11 @@ const Contributor: React.FC<IContributor> = ({ users }) => {
       ) : (
         <div className='relative flex items-center'>
           {users.map((user, key) => (
-            <img
-              key={key}
+            <ProfileImage
               src={user.profileImageUrl}
               alt={user.displayName}
-              className={`${imageStyle} ${key > 0 && '-ml-2'}`}
+              className={key > 0 ? '-ml-2' : undefined}
+              key={key}
             />
           ))}
         </div>

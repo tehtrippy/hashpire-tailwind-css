@@ -1,13 +1,12 @@
 import React from 'react';
 
 interface IHashtag {
-  name: string;
-  size?: 'small' | 'medium';
+  title: string;
   disabled?: boolean;
   className?: string;
 }
 
-const Hashtag: React.FC<IHashtag> = ({ name, size, disabled, className }) => {
+const Hashtag: React.FC<IHashtag> = ({ title, disabled, className }) => {
   const computedStyle = `${
     disabled
       ? 'border-neutral-3 text-neutral-3 bg-transparent cursor-default'
@@ -16,13 +15,9 @@ const Hashtag: React.FC<IHashtag> = ({ name, size, disabled, className }) => {
 
   return (
     <button
-      className={`inline-flex items-center text-neutral-2 text-xs font-normal shadow-1 border ${
-        size === 'small'
-          ? `h-6 py-1 px-2.5 rounded-2xl ${computedStyle}`
-          : `h-8 py-1.5 px-4 rounded-3xl ${computedStyle}`
-      } ${className}`}
+      className={`inline-flex items-center text-neutral-2 text-xs font-normal shadow-1 border ${computedStyle} ${className}`}
     >
-      #{name}
+      #{title}
     </button>
   );
 };

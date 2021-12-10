@@ -18,11 +18,7 @@ const DropdownMenu: React.FC<IDropdownMenu> = ({ menu }) => {
     <Menu as='div' className='relative text-sm text-neutral-2'>
       <Menu.Button className='flex items-center font-semibold group hover:text-accent'>
         {title}
-        <CaretDownIcon
-          size='small'
-          theme='neutral-2'
-          className='ml-2 group-hover:text-accent'
-        />
+        <CaretDownIcon className='ml-2 text-neutral-2 group-hover:text-accent' />
       </Menu.Button>
       <Menu.Items className='absolute left-0 w-40 mt-5 p-3 bg-primary-light rounded-lg shadow-popup'>
         {menuItem.map((item, key) => (

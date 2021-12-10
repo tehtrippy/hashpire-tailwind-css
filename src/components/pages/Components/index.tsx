@@ -18,6 +18,7 @@ import RelationToPage from '../../RelationToPage';
 import Tab from '../../Tab';
 import Search from '../../Search';
 import Header from '../../Header';
+import paginationGuide from '../../../assets/img/pagination.png';
 import {
   CaretDownIcon,
   CaretLeftIcon,
@@ -44,9 +45,7 @@ import {
   TriangleRightIcon,
   TwitterIcon,
 } from '../../Icon';
-import { posts } from './posts';
-import { collapseToggle } from './collapseToggle';
-import { tableOfContents } from './tableOfContent';
+import { tableOfContents, collapseToggle } from './mock';
 
 const Components: React.FC<{}> = () => {
   return (
@@ -55,18 +54,7 @@ const Components: React.FC<{}> = () => {
         <span className='block text-accent text-2xl font-semibold mb-3'>
           Navbar
         </span>
-        <Navbar
-          config={{
-            mobile: {
-              tab: { active: 'home' },
-              leftIconClick: () => {},
-              rightIconClick: () => {},
-            },
-            desktop: {
-              active: 'home',
-            },
-          }}
-        />
+        <Navbar />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
@@ -84,10 +72,18 @@ const Components: React.FC<{}> = () => {
         <span className='block text-accent text-2xl font-semibold mb-3'>
           Hashtag Button
         </span>
-        <Hashtag name='medium' className='mr-2' />
-        <Hashtag name='staking' disabled className='mr-2' />
-        <Hashtag name='small' size='small' className='mr-2' />
-        <Hashtag name='staking' size='small' disabled />
+        <Hashtag title='medium' className='mr-2 h-8 py-1.5 px-4 rounded-3xl' />
+        <Hashtag
+          title='staking'
+          disabled
+          className='mr-2 h-8 py-1.5 px-4 rounded-3xl'
+        />
+        <Hashtag title='small' className='mr-2 h-6 py-1 px-2.5 rounded-2xl' />
+        <Hashtag
+          title='staking'
+          className='h-6 py-1 px-2.5 rounded-2xl'
+          disabled
+        />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
@@ -390,14 +386,10 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
       </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
-          Pagination
+          Pagination (เขียนไม่ได้ตาม Design ครับ)
         </span>
-        <div className='block md:hidden'>
-          <Pagination perPage={3} siblingCount={0} data={posts} />
-        </div>
-        <div className='hidden md:block'>
-          <Pagination perPage={3} siblingCount={1} data={posts} />
-        </div>
+        <img src={paginationGuide} alt='pagiantion' />
+        <Pagination />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
@@ -421,7 +413,7 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         <span className='block text-accent text-2xl font-semibold mb-3'>
           Tab
         </span>
-        <Tab active='home' />
+        <Tab />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
@@ -441,7 +433,7 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         <span className='block text-accent text-2xl font-semibold mb-3'>
           Icons
         </span>
-        <div className='flex space-x-2'>
+        <div className='flex space-x-2 text-neutral-1'>
           <CaretUpIcon />
           <CaretDownIcon />
           <CaretLeftIcon />

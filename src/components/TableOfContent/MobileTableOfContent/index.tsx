@@ -15,20 +15,20 @@ const MobileTableOfContent: React.FC<ITableOfContent> = ({ data }) => {
             } border-b border-primary`}
           >
             <div className='flex items-center'>
-              <ListBulletIcon theme='neutral-3' />
+              <ListBulletIcon className='text-neutral-3 h-6 w-6' />
               <div className='ml-2 text-base font-semibold text-neutral-3'>
                 Table of contents
               </div>
             </div>
             {open ? (
-              <CaretDownIcon theme='neutral-3' />
+              <CaretDownIcon className='text-neutral-3 h-6 w-6' />
             ) : (
-              <CaretRightIcon theme='neutral-3' />
+              <CaretRightIcon className='text-neutral-3 h-6 w-6' />
             )}
           </Disclosure.Button>
           <Disclosure.Panel>
             <div className='p-4 bg-neutral-5 rounded-b-lg'>
-              <CollapseToggle data={data} theme='neutral-3' />
+              <CollapseToggle data={data} />
             </div>
           </Disclosure.Panel>
         </>

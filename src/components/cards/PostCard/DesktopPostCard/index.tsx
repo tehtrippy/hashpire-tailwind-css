@@ -31,9 +31,8 @@ const DesktopPostCard: React.FC<IPostCard> = ({
           <div className='line-clamp-1'>
             {tags.map((tag, key) => (
               <Hashtag
-                className={`${key > 0} && mr-2`}
-                size='small'
-                name={tag.name}
+                className={`h-6 py-1 px-2.5 rounded-2xl ${key > 0} && mr-2`}
+                title={tag.name}
                 key={key}
               />
             ))}

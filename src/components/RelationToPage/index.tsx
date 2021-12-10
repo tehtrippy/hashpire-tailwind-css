@@ -9,13 +9,13 @@ const RelationToPage: React.FC<IRelationToPage> = ({ data }) => {
   return (
     <div>
       <div className='flex items-center bg-primary px-4 py-2'>
-        <LinkIcon theme='neutral-3' />
+        <LinkIcon className='text-neutral-3 h-6 w-6' />
         <span className='block ml-2 text-base font-semibold text-neutral-3'>
           Relation to this page
         </span>
       </div>
       <div className='p-4 bg-primary-light'>
-        <CollapseToggle data={data} theme='neutral-3' />
+        <CollapseToggle data={data} />
       </div>
     </div>
   );

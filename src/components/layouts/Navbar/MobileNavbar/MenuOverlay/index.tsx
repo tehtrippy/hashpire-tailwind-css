@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Transition } from '@headlessui/react';
 import { CrossIcon } from '../../../../Icon';
 import { SidePanelFooter } from '../../../footer';
@@ -10,8 +10,6 @@ interface IMenuOverlay {
   handleShowMenu: (show: boolean) => void;
 }
 
-const body = document.getElementsByTagName('body');
-
 const MenuOverlay: React.FC<IMenuOverlay> = ({
   handleShowMenu,
   showFooter,
@@ -19,13 +17,6 @@ const MenuOverlay: React.FC<IMenuOverlay> = ({
   show,
   children,
 }) => {
-  // lock and unlock body scroll when menu overlay visible
-  useEffect(() => {
-    show
-      ? (body[0].style.overflow = 'hidden')
-      : (body[0].style.overflow = 'visible');
-  }, [show]);
-
   return (
     <Transition show={show}>
       <Transition.Child
@@ -39,10 +30,14 @@ const MenuOverlay: React.FC<IMenuOverlay> = ({
       >
         <div className='h-16 flex items-center justify-between px-6'>
           {topLeftContent}
-          <CrossIcon onClick={() => handleShowMenu(false)} />
+          <CrossIcon />
         </div>
         <div className='flex-grow p-4'>{children}</div>
-        {showFooter && <SidePanelFooter className='p-6' />}
+        {showFooter && (
+          <div className='p-6'>
+            <SidePanelFooter />
+          </div>
+        )}
       </Transition.Child>
     </Transition>
   );

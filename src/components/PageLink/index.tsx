@@ -13,7 +13,7 @@ interface IPageLink {
 
 const PageLink: React.FC<IPageLink> = ({ moc, linkPage }) => {
   return (
-    <div className='flex flex-col bg-neutral-5 rounded-lg'>
+    <div className='bg-neutral-5 rounded-lg'>
       <Disclosure>
         {({ open }) => (
           <>
@@ -22,9 +22,9 @@ const PageLink: React.FC<IPageLink> = ({ moc, linkPage }) => {
                 Relationship to this page
               </span>
               {open ? (
-                <CaretDownIcon theme='neutral-1' />
+                <CaretDownIcon className='text-neutral-1 h-8 w-8' />
               ) : (
-                <CaretRightIcon theme='neutral-1' />
+                <CaretRightIcon className='text-neutral-1 h-8 w-8' />
               )}
             </Disclosure.Button>
             {(moc || linkPage) && (

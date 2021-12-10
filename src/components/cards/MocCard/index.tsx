@@ -28,7 +28,7 @@ const MocCard: React.FC<IMocCard> = ({
       <div className='flex flex-col justify-between'>
         <div className='flex flex-col'>
           <div className='flex items-center'>
-            <FolderIcon theme='neutral-1' />
+            <FolderIcon className='text-neutral-1 h-8 w-8' />
             <span className='text-neutral-1 font-semibold line-clamp-1 ml-2'>
               {title}
             </span>

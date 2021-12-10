@@ -1,30 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import TabItem from './TabItem';
 import { HomeIcon, CommunityIcon, IdeaIcon } from '../Icon';
 
-export interface ITab {
-  active: 'home' | 'community' | 'about';
-}
+const items = [<HomeIcon />, <CommunityIcon />, <IdeaIcon />];
 
-const Tab: React.FC<ITab> = ({ active = 'home' }) => {
-  const [tabActive, setTabActive] = useState<ITab>({ active });
-
+const Tab: React.FC<{}> = () => {
   return (
-    <div className='flex justify-between px-12 py-4 bg-primary'>
-      <HomeIcon
-        size='medium'
-        theme={tabActive.active === 'home' ? 'accent' : undefined}
-        onClick={() => setTabActive({ active: 'home' })}
-      />
-      <CommunityIcon
-        size='medium'
-        theme={tabActive.active === 'community' ? 'accent' : undefined}
-        onClick={() => setTabActive({ active: 'community' })}
-      />
-      <IdeaIcon
-        size='medium'
-        theme={tabActive.active === 'about' ? 'accent' : undefined}
-        onClick={() => setTabActive({ active: 'about' })}
-      />
+    <div className='px-12 py-4 flex justify-between bg-primary'>
+      {items.map((item, key) => (
+        <TabItem key={key}>{item}</TabItem>
+      ))}
     </div>
   );
 };

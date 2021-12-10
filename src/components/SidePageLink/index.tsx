@@ -7,9 +7,9 @@ export interface ISidePageLink {
 const SidePageLink: React.FC<ISidePageLink> = ({ links }) => {
   return (
     <div>
-      <span className='text-base font-semibold text-neutral-4'>
+      <div className='text-base font-semibold text-neutral-4'>
         Link to this page
-      </span>
+      </div>
       <div className='flex mt-4'>
         <div className='border-2 border-accent' />
         <div className='ml-6 flex flex-col space-y-4'>

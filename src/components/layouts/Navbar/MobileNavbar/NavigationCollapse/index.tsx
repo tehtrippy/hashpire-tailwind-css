@@ -20,9 +20,9 @@ const NavigationCollapse: React.FC<INavigationCollapse> = ({ className }) => {
             >
               <span>Garden</span>
               {open ? (
-                <CaretDownIcon theme='accent' />
+                <CaretDownIcon className='text-accent' />
               ) : (
-                <CaretRightIcon theme='neutral-1' />
+                <CaretRightIcon className='text-neutral-1' />
               )}
             </Disclosure.Button>
             <Disclosure.Panel className='flex flex-col'>

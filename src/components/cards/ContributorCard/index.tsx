@@ -45,12 +45,12 @@ const ContributorCard: React.FC<IContributorCard> = ({
         <span className='block text-sm text-neutral-3 text-center line-clamp-3'>
           {bio}
         </span>
-        <div className='flex items-center space-x-1'>
-          {github && <GithubIcon />}
-          {facebook && <FacebookIcon />}
-          {instagram && <InstagramIcon />}
-          {twitter && <TwitterIcon />}
-          {mail && <MailIcon />}
+        <div className='flex items-center space-x-1 text-neutral-3'>
+          {github && <GithubIcon className='w-6 h-6' />}
+          {facebook && <FacebookIcon className='w-6 h-6' />}
+          {instagram && <InstagramIcon className='w-6 h-6' />}
+          {twitter && <TwitterIcon className='w-6 h-6' />}
+          {mail && <MailIcon className='w-6 h-6' />}
         </div>
       </div>
     </div>
