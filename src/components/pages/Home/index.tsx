@@ -3,7 +3,14 @@ import { Layout } from '../../layouts';
 
 const Home: React.FC<{}> = () => {
   return (
-    <Layout>
+    <Layout
+      navbar={{
+        config: {
+          mobile: { tab: { active: 'home' } },
+          desktop: { active: 'home' },
+        },
+      }}
+    >
       <div className='bg-indigo-500 p-6'>
         Esse commodo aliqua aliqua mollit esse nisi sit. Culpa commodo proident
         amet dolore eiusmod consectetur exercitation proident ad tempor. Eiusmod

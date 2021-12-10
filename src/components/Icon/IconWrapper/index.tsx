@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface IIconWrapper {
-  size?: 'smaller' | 'small' | 'large';
+  size?: 'smaller' | 'small' | 'medium' | 'large';
   theme?:
     | 'accent'
     | 'neutral-1'
@@ -27,6 +27,8 @@ const IconWrapper: React.FC<IIconWrapper> = ({
       ? 'h-6 w-6'
       : size === 'smaller'
       ? 'h-5 w-5'
+      : size === 'medium'
+      ? 'h-10 w-10'
       : size === 'large'
       ? 'h-12 w-12'
       : 'h-8 w-8';

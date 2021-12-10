@@ -83,17 +83,17 @@ const Pagination: React.FC<IPagination> = ({
           theme={currentPage !== lastPage ? 'neutral-1' : undefined}
           onClick={currentPage !== lastPage ? onNext : undefined}
         />
-        {showJumpToPage && (
-          <div className='ml-4'>
-            <JumpToPage
-              page={jumpPageValue}
-              max={Number(lastPage)}
-              onChange={(page) => handleJumpPageChange(page)}
-              onClick={() => setCurrentPage(jumpPageValue)}
-            />
-          </div>
-        )}
       </div>
+      {showJumpToPage && (
+        <div className='flex justify-center mt-4'>
+          <JumpToPage
+            page={jumpPageValue}
+            max={Number(lastPage)}
+            onChange={(page) => handleJumpPageChange(page)}
+            onClick={() => setCurrentPage(jumpPageValue)}
+          />
+        </div>
+      )}
     </div>
   );
 };

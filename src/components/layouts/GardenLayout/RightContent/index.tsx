@@ -1,7 +1,7 @@
 import React from 'react';
 import type { IGardenLayout } from '../../GardenLayout';
 
-interface IRightContent extends Omit<IGardenLayout, 'leftContent'> {}
+interface IRightContent extends Omit<IGardenLayout, 'leftContent' | 'navbar'> {}
 
 const RightContent: React.FC<IRightContent> = ({
   right25Content,

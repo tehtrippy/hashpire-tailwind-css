@@ -1,6 +1,6 @@
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
-import { ListIcon, CaretRightIcon, CaretDownIcon } from '../../Icon';
+import { ListBulletIcon, CaretRightIcon, CaretDownIcon } from '../../Icon';
 import CollapseToggle from '../../CollapseToggle';
 import type { ITableOfContent } from '..';
 
@@ -15,7 +15,7 @@ const MobileTableOfContent: React.FC<ITableOfContent> = ({ data }) => {
             } border-b border-primary`}
           >
             <div className='flex items-center'>
-              <ListIcon theme='neutral-3' />
+              <ListBulletIcon theme='neutral-3' />
               <div className='ml-2 text-base font-semibold text-neutral-3'>
                 Table of contents
               </div>

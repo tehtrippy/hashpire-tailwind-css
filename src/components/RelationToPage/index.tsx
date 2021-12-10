@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashIcon } from '../Icon';
+import { LinkIcon } from '../Icon';
 import CollapseToggle from '../CollapseToggle';
 import type { ICollapseToggle } from '../CollapseToggle';
 
@@ -9,7 +9,7 @@ const RelationToPage: React.FC<IRelationToPage> = ({ data }) => {
   return (
     <div>
       <div className='flex items-center bg-primary px-4 py-2'>
-        <HashIcon theme='neutral-3' />
+        <LinkIcon theme='neutral-3' />
         <span className='block ml-2 text-base font-semibold text-neutral-3'>
           Relation to this page
         </span>

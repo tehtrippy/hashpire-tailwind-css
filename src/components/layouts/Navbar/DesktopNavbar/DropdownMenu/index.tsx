@@ -8,7 +8,6 @@ interface IDropdownMenu {
     title: string;
     menuItem: {
       title: string;
-      path?: string;
     }[];
   };
 }
@@ -28,7 +27,7 @@ const DropdownMenu: React.FC<IDropdownMenu> = ({ menu }) => {
       <Menu.Items className='absolute left-0 w-40 mt-5 p-3 bg-primary-light rounded-lg shadow-popup'>
         {menuItem.map((item, key) => (
           <Menu.Item key={key}>
-            <Link title={item.title} path={item.path} />
+            <Link title={item.title} />
           </Menu.Item>
         ))}
       </Menu.Items>

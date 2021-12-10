@@ -1,23 +1,19 @@
 import React from 'react';
-import DesktopNavbar from './DesktopNavbar';
-import MobileNavbar from './MobileNavbar';
+import DesktopNavbar, { IDesktopNavbar } from './DesktopNavbar';
+import MobileNavbar, { IMobileNavbar } from './MobileNavbar';
 
-const navbarLeftItems = [
-  { name: 'Articles', path: '/' },
-  { name: 'Knowledge-base', path: '/' },
-  { name: 'MOCs', path: '/' },
-  { name: 'Community', path: '/' },
-  { name: 'About', path: '/' },
-];
+export interface INavbar {
+  config: { mobile: IMobileNavbar; desktop: IDesktopNavbar };
+}
 
-const Navbar: React.FC<{}> = () => {
+const Navbar: React.FC<INavbar> = ({ config }) => {
   return (
     <>
       <div className='block lg:hidden'>
-        <MobileNavbar leftItems={navbarLeftItems} />
+        <MobileNavbar {...config.mobile} />
       </div>
       <div className='hidden lg:block'>
-        <DesktopNavbar leftItems={navbarLeftItems} />
+        <DesktopNavbar {...config.desktop} />
       </div>
     </>
   );

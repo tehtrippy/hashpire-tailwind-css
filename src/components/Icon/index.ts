@@ -14,6 +14,14 @@ import CaretLeftIcon from './CaretLeft';
 import MoreIcon from './More';
 import TriangleDownIcon from './TriangleRight';
 import TriangleRightIcon from './TriangleDown';
+import CommunityIcon from './Community';
+import DiscoverIcon from './Discover';
+import HomeIcon from './Home';
+import IdeaIcon from './Idea';
+import LinkIcon from './Link';
+import ListBulletIcon from './ListBullet';
+import LeftPaneIcon from './LeftPane';
+import RightPaneIcon from './RightPane';
 
 export {
   GithubIcon,
@@ -32,4 +40,12 @@ export {
   MoreIcon,
   TriangleDownIcon,
   TriangleRightIcon,
+  CommunityIcon,
+  DiscoverIcon,
+  HomeIcon,
+  IdeaIcon,
+  LinkIcon,
+  ListBulletIcon,
+  LeftPaneIcon,
+  RightPaneIcon,
 };

@@ -15,6 +15,9 @@ import Badge from '../../Badge';
 import CollapseToggle from '../../CollapseToggle';
 import TableOfContent from '../../TableOfContent';
 import RelationToPage from '../../RelationToPage';
+import Tab from '../../Tab';
+import Search from '../../Search';
+import Header from '../../Header';
 import { posts } from './posts';
 import { collapseToggle } from './collapseToggle';
 import { tableOfContents } from './tableOfContent';
@@ -26,7 +29,18 @@ const Components: React.FC<{}> = () => {
         <span className='block text-accent text-2xl font-semibold mb-3'>
           Navbar
         </span>
-        <Navbar />
+        <Navbar
+          config={{
+            mobile: {
+              tab: { active: 'home' },
+              leftIconClick: () => {},
+              rightIconClick: () => {},
+            },
+            desktop: {
+              active: 'home',
+            },
+          }}
+        />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
@@ -53,7 +67,9 @@ const Components: React.FC<{}> = () => {
         <span className='block text-accent text-2xl font-semibold mb-3'>
           Link Button
         </span>
-        <Link title='Go to garden' />
+        <div className='text-neutral-1'>
+          <Link title='Go to garden' />
+        </div>
       </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
@@ -374,6 +390,26 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
           Relation to this page
         </span>
         <RelationToPage data={tableOfContents} />
+      </div>
+      <div className='bg-gray-700 py-4 px-4'>
+        <span className='block text-accent text-2xl font-semibold mb-3'>
+          Tab
+        </span>
+        <Tab active='home' />
+      </div>
+      <div className='bg-gray-700 py-4 px-4'>
+        <span className='block text-accent text-2xl font-semibold mb-3'>
+          Search
+        </span>
+        <Search />
+      </div>
+      <div className='bg-gray-700 py-4 px-4'>
+        <span className='block text-accent text-2xl font-semibold mb-3'>
+          Header
+        </span>
+        <Header title='📌 Feature MOCs' />
+        <br />
+        <Header title='📝 ALL NOTES' />
       </div>
     </div>
   );

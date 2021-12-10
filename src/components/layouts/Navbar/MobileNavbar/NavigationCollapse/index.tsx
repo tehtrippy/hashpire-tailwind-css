@@ -1,16 +1,12 @@
 import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { CaretDownIcon, CaretRightIcon } from '../../../../Icon';
-import { Link } from 'react-router-dom';
 
 interface INavigationCollapse {
   className?: string;
 }
 
-const items = [
-  { title: 'Articles', path: '/' },
-  { title: 'Notes', path: '/' },
-];
+const items = [{ title: 'Articles' }, { title: 'Notes' }];
 
 const NavigationCollapse: React.FC<INavigationCollapse> = ({ className }) => {
   return (
@@ -31,13 +27,12 @@ const NavigationCollapse: React.FC<INavigationCollapse> = ({ className }) => {
             </Disclosure.Button>
             <Disclosure.Panel className='flex flex-col'>
               {items.map((item, key) => (
-                <Link
+                <span
+                  className='inline-block px-10 py-1.5 mt-2 rounded-lg text-base font-semibold text-neutral-2 hover:text-accent'
                   key={key}
-                  to={item.path}
-                  className='px-10 py-1.5 mt-2 rounded-lg text-base font-semibold text-neutral-2 hover:text-accent'
                 >
                   {item.title}
-                </Link>
+                </span>
               ))}
             </Disclosure.Panel>
           </>

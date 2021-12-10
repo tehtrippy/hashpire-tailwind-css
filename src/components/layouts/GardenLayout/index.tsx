@@ -1,10 +1,10 @@
 import React from 'react';
-import { Layout } from '../../../components/layouts';
+import { Layout, ILayout } from '../../../components/layouts';
 import Navbar from '../Navbar';
 import LeftContent from './LeftContent';
 import RightCotnent from './RightContent';
 
-export interface IGardenLayout {
+export interface IGardenLayout extends ILayout {
   leftContent?: React.ReactNode;
   right75Content?: React.ReactNode;
   right25Content?: React.ReactNode;
@@ -12,6 +12,7 @@ export interface IGardenLayout {
 }
 
 const GardenLayout: React.FC<IGardenLayout> = ({
+  navbar,
   leftContent,
   right75Content,
   right25Content,
@@ -20,7 +21,7 @@ const GardenLayout: React.FC<IGardenLayout> = ({
   return (
     <>
       <div className='hidden lg:flex h-full flex-col'>
-        <Navbar />
+        <Navbar config={navbar.config} />
         <div className='flex flex-grow overflow-auto bg-red-500'>
           <LeftContent>{leftContent}</LeftContent>
           <RightCotnent
@@ -30,7 +31,7 @@ const GardenLayout: React.FC<IGardenLayout> = ({
         </div>
       </div>
       <div className='block lg:hidden'>
-        <Layout>{mobileContent}</Layout>
+        <Layout navbar={navbar}>{mobileContent}</Layout>
       </div>
     </>
   );
