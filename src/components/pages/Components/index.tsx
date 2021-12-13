@@ -18,6 +18,7 @@ import RelationToPage from '../../RelationToPage';
 import Tab from '../../Tab';
 import Search from '../../Search';
 import Header from '../../Header';
+import PageHeader from '../../PageHeader';
 import paginationGuide from '../../../assets/img/pagination.png';
 import {
   CaretDownIcon,
@@ -428,6 +429,12 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         <Header title='📌 Feature MOCs' />
         <br />
         <Header title='📝 ALL NOTES' />
+      </div>
+      <div className='bg-gray-700 py-4 px-4'>
+        <span className='block text-accent text-2xl font-semibold mb-3'>
+          Page Header
+        </span>
+        <PageHeader title='Contributors' />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
