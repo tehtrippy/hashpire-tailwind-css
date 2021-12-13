@@ -1,5 +1,5 @@
 import React from 'react';
-import Hashtag from '../../../components/Hashtag';
+import Hashtag from '../../tags/Hashtag';
 import { GardenLayout } from '../../layouts';
 
 const hashtags = [
@@ -16,7 +16,10 @@ const Garden: React.FC<{}> = () => {
     <GardenLayout
       leftContent={hashtags.map((item, key) => (
         <div className='mx-2 my-2' key={key}>
-          <Hashtag title={item} className='h-6 py-1 px-2.5 rounded-2xl' />
+          <Hashtag
+            title={item}
+            className='h-6 py-1 px-2.5 rounded-2xl bg-neutral-5 border-neutral-5 hover:border-accent hover:text-accent focus:border-accent-pressed focus:outline-btnFocus focus:text-accent-pressed'
+          />
         </div>
       ))}
       right75Content={

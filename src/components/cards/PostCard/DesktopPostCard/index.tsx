@@ -1,5 +1,5 @@
 import React from 'react';
-import Hashtag from '../../../Hashtag';
+import { Hashtag } from '../../../tags';
 import Contributor from '../../../Contributor';
 import type { IPostCard } from '../../PostCard';
 

@@ -1,6 +1,6 @@
 import Navbar from '../../layouts/Navbar';
 import { MainPageFooter, SidePanelFooter } from '../../layouts/footer';
-import Hashtag from '../../Hashtag';
+import { Hashtag, DisabledHashtag } from '../../tags';
 import Link from '../../Link';
 import Contributor from '../../Contributor';
 import PostCard from '../../cards/PostCard';
@@ -73,17 +73,10 @@ const Components: React.FC<{}> = () => {
         <span className='block text-accent text-2xl font-semibold mb-3'>
           Hashtag Button
         </span>
-        <Hashtag title='medium' className='mr-2 h-8 py-1.5 px-4 rounded-3xl' />
-        <Hashtag
-          title='staking'
-          disabled
+        <Hashtag title='force' className='mr-2 h-8 py-1.5 px-4 rounded-3xl' />
+        <DisabledHashtag
+          title='force'
           className='mr-2 h-8 py-1.5 px-4 rounded-3xl'
-        />
-        <Hashtag title='small' className='mr-2 h-6 py-1 px-2.5 rounded-2xl' />
-        <Hashtag
-          title='staking'
-          className='h-6 py-1 px-2.5 rounded-2xl'
-          disabled
         />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
