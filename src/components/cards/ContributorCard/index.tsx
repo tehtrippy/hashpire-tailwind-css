@@ -12,7 +12,7 @@ interface IContributorCard {
   displayName: string;
   profileImageUrl: string;
   bio: string;
-  badge: 'Sponsor' | 'Contributor';
+  badge: string;
   contacts: {
     github?: string;
     facebook?: string;
@@ -20,6 +20,7 @@ interface IContributorCard {
     twitter?: string;
     mail?: string;
   };
+  className?: string;
 }
 
 const ContributorCard: React.FC<IContributorCard> = ({
@@ -28,10 +29,13 @@ const ContributorCard: React.FC<IContributorCard> = ({
   bio,
   badge,
   contacts,
+  className,
 }) => {
   const { github, facebook, instagram, twitter, mail } = contacts;
   return (
-    <div className='relative flex flex-col items-center h-72 w-60 px-6 pb-6 bg-primary-light border border-neutral-4 rounded-3xl'>
+    <div
+      className={`relative flex flex-col items-center h-72 w-60 px-6 pb-6 bg-primary-light border border-neutral-4 rounded-3xl ${className}`}
+    >
       <img
         src={profileImageUrl}
         alt={displayName}

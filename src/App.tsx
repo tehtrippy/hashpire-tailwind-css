@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home, Garden, Components } from './components/pages';
+import { Home, Garden, Components, Community } from './components/pages';
 
 const App: React.FC<{}> = () => {
   return (
@@ -9,6 +9,7 @@ const App: React.FC<{}> = () => {
         <Route path='/' element={<Home />} />
         <Route path='/garden' element={<Garden />} />
         <Route path='/components' element={<Components />} />
+        <Route path='/community' element={<Community />} />
       </Routes>
     </BrowserRouter>
   );
