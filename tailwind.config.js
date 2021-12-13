@@ -34,6 +34,9 @@ module.exports = {
       outline: {
         btnFocus: '4px solid rgba(255, 151, 0, 0.2)',
       },
+      height: {
+        content: 'calc(100vh - 64px)',
+      },
     },
   },
   variants: {},
