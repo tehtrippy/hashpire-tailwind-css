@@ -12,8 +12,8 @@ const DesktopPostCard: React.FC<IPostCard> = ({
   users,
 }) => {
   return (
-    <div className='flex items-center justify-between h-44 max-w-5xl'>
-      <div className='flex flex-col justify-between h-full w-4/6 mr-4'>
+    <div className='flex items-center justify-between h-44'>
+      <div className='flex flex-col justify-between h-full w-4/6 pr-4'>
         <div className='space-y-2'>
           <Contributor users={users} />
           <span className='block text-xl font-semibold text-neutral-1 line-clamp-2'>

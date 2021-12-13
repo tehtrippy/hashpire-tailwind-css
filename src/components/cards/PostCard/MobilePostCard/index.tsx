@@ -13,7 +13,7 @@ const MobilePostCard: React.FC<IMobilePostCard> = ({
 }) => {
   return (
     <div className='flex items-center h-32'>
-      <div className='flex flex-col justify-between w-3/4 mr-2'>
+      <div className='flex flex-col justify-between w-3/4 pr-2'>
         <div>
           <Contributor users={users} />
           <span className='block mt-2 text-base font-semibold text-neutral-1 line-clamp-2'>
