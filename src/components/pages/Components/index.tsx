@@ -19,6 +19,7 @@ import Tab from '../../Tab';
 import Search from '../../Search';
 import Header from '../../Header';
 import PageHeader from '../../PageHeader';
+import { Layout, GardenLayout } from '../../layouts';
 import paginationGuide from '../../../assets/img/pagination.png';
 import {
   CaretDownIcon,
@@ -50,7 +51,38 @@ import { tableOfContents, collapseToggle } from './mock';
 
 const Components: React.FC<{}> = () => {
   return (
-    <div className='bg-black min-h-screen p-6 space-y-6'>
+    <div className='bg-black p-6 space-y-6'>
+      <div className='bg-gray-700 py-4 px-4'>
+        <span className='block text-accent text-2xl font-semibold mb-3'>
+          Icons
+        </span>
+        <div className='flex space-x-2 text-neutral-1'>
+          <CaretUpIcon />
+          <CaretDownIcon />
+          <CaretLeftIcon />
+          <CaretRightIcon />
+          <CrossIcon />
+          <HomeIcon />
+          <IdeaIcon />
+          <CommunityIcon />
+          <DiscoverIcon />
+          <FolderIcon />
+          <LeftPaneIcon />
+          <RightPaneIcon />
+          <LinkIcon />
+          <ListIcon />
+          <ListBulletIcon />
+          <MailIcon />
+          <MoreIcon />
+          <TriangleDownIcon />
+          <TriangleRightIcon />
+          <TwitterIcon />
+          <FacebookIcon />
+          <GithubIcon />
+          <InstagramIcon />
+          <HashIcon />
+        </div>
+      </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
           Navbar
@@ -431,34 +463,38 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
       </div>
       <div className='bg-gray-700 py-4 px-4'>
         <span className='block text-accent text-2xl font-semibold mb-3'>
-          Icons
+          Layout
         </span>
-        <div className='flex space-x-2 text-neutral-1'>
-          <CaretUpIcon />
-          <CaretDownIcon />
-          <CaretLeftIcon />
-          <CaretRightIcon />
-          <CrossIcon />
-          <HomeIcon />
-          <IdeaIcon />
-          <CommunityIcon />
-          <DiscoverIcon />
-          <FolderIcon />
-          <LeftPaneIcon />
-          <RightPaneIcon />
-          <LinkIcon />
-          <ListIcon />
-          <ListBulletIcon />
-          <MailIcon />
-          <MoreIcon />
-          <TriangleDownIcon />
-          <TriangleRightIcon />
-          <TwitterIcon />
-          <FacebookIcon />
-          <GithubIcon />
-          <InstagramIcon />
-          <HashIcon />
-        </div>
+        <Layout>
+          <div className='text-white font-semibold p-5 bg-indigo-500'>
+            Content is here.
+          </div>
+        </Layout>
+      </div>
+      <div className='bg-gray-700 py-4 px-4'>
+        <span className='block text-accent text-2xl font-semibold mb-3'>
+          Garden Layout
+        </span>
+        <GardenLayout
+          leftContent={
+            <div className='bg-blue-600 text-white'>Desktop left content</div>
+          }
+          right75Content={
+            <div className='bg-green-500 text-white'>
+              Desktop right 75% content
+            </div>
+          }
+          right25Content={
+            <div className='bg-yellow-500 text-white'>
+              Desktop right 25% content
+            </div>
+          }
+          mobileContent={
+            <div className='text-white font-semibold p-5 bg-indigo-500'>
+              Content is here.
+            </div>
+          }
+        />
       </div>
     </div>
   );

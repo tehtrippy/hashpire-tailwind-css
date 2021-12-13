@@ -19,9 +19,9 @@ const GardenLayout: React.FC<IGardenLayout> = ({
 }) => {
   return (
     <>
-      <div className='hidden lg:flex h-full flex-col'>
+      <div className='hidden lg:block'>
         <Navbar />
-        <div className='flex flex-grow overflow-auto'>
+        <div className='h-content flex bg-primary-light'>
           <LeftContent>{leftContent}</LeftContent>
           <RightCotnent
             right25Content={right25Content}

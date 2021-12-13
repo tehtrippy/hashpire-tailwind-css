@@ -8,7 +8,7 @@ const RightContent: React.FC<IRightContent> = ({
   right75Content,
 }) => {
   return (
-    <div className='flex flex-grow pt-6 pl-6 bg-primary-light overflow-y-auto'>
+    <div className='flex flex-grow pt-6 pl-6 overflow-y-auto'>
       <div className='flex-grow flex justify-center'>
         <div className='max-w-5xl'>{right75Content}</div>
       </div>
