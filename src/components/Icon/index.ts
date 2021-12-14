@@ -22,6 +22,14 @@ import LinkIcon from './Link';
 import ListBulletIcon from './ListBullet';
 import LeftPaneIcon from './LeftPane';
 import RightPaneIcon from './RightPane';
+import EqualsIcon from './Equals';
+import GardenIcon from './Garden';
+import IdeaPotIcon from './IdeaPot';
+import SeedIcon from './Seed';
+import TreeIcon from './Tree';
+import PlusIcon from './Plus';
+import LightIcon from './Light';
+import HashpireIcon from './Hashpire';
 
 export interface Icon {
   className?: string;
@@ -52,4 +60,12 @@ export {
   ListBulletIcon,
   LeftPaneIcon,
   RightPaneIcon,
+  EqualsIcon,
+  GardenIcon,
+  IdeaPotIcon,
+  SeedIcon,
+  TreeIcon,
+  PlusIcon,
+  LightIcon,
+  HashpireIcon,
 };
