@@ -2,27 +2,37 @@ module.exports = {
   // Uncomment the line below to enable the experimental Just-in-Time ("JIT") mode.
   // https://tailwindcss.com/docs/just-in-time-mode
   // mode: "jit",
+
+  // primary = background-darker
+  // primary-light = background
+  // secondary = neutral-100
+  // accent = primary
+  // accent-pressed = primary-dark
+  // accent-focus = primary (opacity 20%)
+  // neutral-1 = neutral-100
+  // neutral-2 = neutral-200
+  // neutral-3 = neutral-400
+  // neutral-4 = neutral-500
+  // neutral-5 = neutral-900
+
   theme: {
     extend: {
       colors: {
+        brand: {
+          yellow: '#FF9700',
+          white: '#FFFFFF',
+          gray: '#3C3C3C',
+        },
         primary: {
-          DEFAULT: '#1E1E1E',
-          light: '#262626',
-        },
-        secondary: {
-          DEFAULT: '#F2F2F2',
-        },
-        accent: {
-          DEFAULT: '#F08E00',
-          pressed: '#CC8114',
-          focus: '#FF9700',
+          DEFAULT: '#FF9700',
+          dark: '#CC8114',
         },
         neutral: {
-          1: '#F5F5F5',
-          2: '#E0E0E0',
-          3: '#9E9E9E',
-          4: '#616161',
-          5: '#0A0A0A',
+          100: '#F5F5F5',
+          200: '#E5E5E5',
+          400: '#A3A3A3',
+          500: '#737373',
+          900: '#171717',
         },
         background: {
           DEFAULT: '#262626',
@@ -34,12 +44,6 @@ module.exports = {
         2: '0px 4px 8px rgba(0, 0, 0, 0.1)',
         popup: '4px 4px 40px -1px rgba(0, 0, 0, 0.25)',
         input: 'inset 2px 2px 4px rgba(0, 0, 0, 0.12)',
-      },
-      outline: {
-        btnFocus: '4px solid rgba(255, 151, 0, 0.2)',
-      },
-      height: {
-        content: 'calc(100vh - 64px)',
       },
     },
   },

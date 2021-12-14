@@ -24,19 +24,19 @@ const whyjoin = [
 
 const garden = [
   {
-    icon: <SeedIcon className='text-neutral-3 w-14 h-14' />,
+    icon: <SeedIcon className='text-neutral-2 w-14 h-14' />,
     title: 'Seed',
     description: 'Seed your garden \nwith a content idea.',
     subDescription: '(start a topic with an idea)',
   },
   {
-    icon: <TreeIcon className='text-neutral-3 w-14 h-14' />,
+    icon: <TreeIcon className='text-neutral-2 w-14 h-14' />,
     title: 'Tree',
     description: `Produce branches for your content. \nOne note = one idea`,
     subDescription: '(Create content linked to the topic)',
   },
   {
-    icon: <GardenIcon className='text-neutral-3 w-14 h-14' />,
+    icon: <GardenIcon className='text-neutral-2 w-14 h-14' />,
     title: 'Garden',
     description: 'Connecting the dots and create \nevergreen darden',
     subDescription: '(Allow other to join)',
@@ -87,13 +87,13 @@ const About: React.FC<{}> = () => {
           {`is a community-driven \nDigital Garden`}
         </span>
         <p className='mt-6 text-base text-accent sm:whitespace-pre-line md:text-xl md:font-semibold md:text-neutral-3 lg:text-accent'>
-          {`A space for people ro create, curate, cultivate and discuss content \nrelated to the Decentralize web`}
+          {`A space for people to create, curate, cultivate and discuss content \nrelated to the Decentralize web`}
         </p>
         <div className='mt-16'>
           <span className='block text-2xl font-semibold text-neutral-1 underline'>
             Community Goals
           </span>
-          <div className='mt-6 grid grid-cols-1 gap-y-6 md:grid-cols-3'>
+          <div className='mt-6 grid grid-cols-1 gap-y-6 gap-x-5 md:grid-cols-3'>
             {communityGoals.map((goal, key) => (
               <p
                 className='text-sm text-neutral-2 whitespace-pre-line md:whitespace-normal lg:whitespace-pre-line'
