@@ -19,8 +19,6 @@ import Tab from '../../Tab';
 import Search from '../../Search';
 import Header from '../../Header';
 import PageHeader from '../../PageHeader';
-import DOT from '../../DOT';
-import TopicWithIcon from '../../TopicWithIcon';
 import { Layout, GardenLayout } from '../../layouts';
 import paginationGuide from '../../../assets/img/pagination.png';
 import {
@@ -497,23 +495,6 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
               Content is here.
             </div>
           }
-        />
-      </div>
-      <div className='flex flex-col items-start bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
-          DOT
-        </span>
-        <DOT title={`Participate in events \n(e.g.hackathons, CTF)`} />
-      </div>
-      <div className='flex flex-col items-start bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
-          Topic with icon
-        </span>
-        <TopicWithIcon
-          icon={<HashIcon className='w-12 h-12 text-neutral-3' />}
-          title='Seed'
-          description='Seed your garden with a content idea.'
-          subDescription='(start a topic with an idea)'
         />
       </div>
     </div>
