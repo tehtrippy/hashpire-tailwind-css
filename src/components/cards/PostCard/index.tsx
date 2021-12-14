@@ -14,10 +14,10 @@ export interface IPostCard extends IContributor {
 const PostCard: React.FC<IPostCard> = ({ ...args }) => {
   return (
     <div>
-      <div className='hidden lg:block'>
+      <div className='hidden md:block'>
         <DesktopPostCard {...args} />
       </div>
-      <div className='block lg:hidden'>
+      <div className='block md:hidden'>
         <MobilePostCard {...args} />
       </div>
     </div>

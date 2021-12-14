@@ -12,7 +12,7 @@ const MobilePostCard: React.FC<IMobilePostCard> = ({
   users,
 }) => {
   return (
-    <div className='flex items-center h-32 overflow-hidden'>
+    <div className='flex items-center h-32'>
       <div className='flex flex-col justify-between w-3/4 pr-2'>
         <div>
           <Contributor users={users} />
