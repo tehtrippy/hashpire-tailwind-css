@@ -10,7 +10,7 @@ const Community: React.FC<{}> = () => {
       <div className='hidden lg:block text-center'>
         <PageHeader title='Contributors' />
       </div>
-      <div className='flex flex-wrap justify-around'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
         {contributors.map((contributor, key) => (
           <ContributorCard {...contributor} className='mt-20' key={key} />
         ))}
@@ -20,4 +20,3 @@ const Community: React.FC<{}> = () => {
 };
 
 export default Community;
-
