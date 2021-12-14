@@ -10,6 +10,7 @@ import {
   EqualsIcon,
   HashpireIcon,
 } from '../../Icon';
+import backgroundAbout from '../../../assets/img/about_background.png';
 import { Layout } from '../../layouts';
 
 const whyjoin = [
@@ -52,7 +53,12 @@ const About: React.FC<{}> = () => {
   return (
     <Layout fullWidth>
       {/* Section 1 */}
-      <div className='bg-primary py-10 px-6 md:py-20 md:px-8 lg:py-28 lg:px-32'>
+      <div
+        className='py-10 px-6 bg-cover bg-no-repeat md:py-20 md:px-8 lg:py-28 lg:px-32'
+        style={{
+          backgroundImage: `url(${backgroundAbout})`,
+        }}
+      >
         <div className='grid grid-cols-1 gap-y-7 place-items-center md:grid-cols-5'>
           <div className='flex flex-col items-center'>
             <HashIcon className='text-accent w-16 h-16 md:w-20 md:h-20' />
@@ -70,35 +76,37 @@ const About: React.FC<{}> = () => {
           <EqualsIcon className='text-neutral-1 w-16 h-16 md:w-20 md:h-20' />
           <HashpireIcon />
         </div>
-        <div className='mt-20 text-center'>
-          <span className='text-accent text-xl font-semibold md:text-2xl'>
-            hashpire
-          </span>{' '}
-          <span className='text-neutral-1 text-xl font-semibold whitespace-pre-line md:text-2xl md:whitespace-normal'>
-            {`is a community-driven \nDigital Garden`}
+      </div>
+
+      {/* Section 2 */}
+      <div className='bg-primary text-center py-16 px-6 md:py-20 md:px-8 lg:py-28 lg:px-32'>
+        <span className='text-accent text-xl font-semibold md:text-2xl'>
+          hashpire
+        </span>{' '}
+        <span className='text-neutral-1 text-xl font-semibold whitespace-pre-line md:text-2xl md:whitespace-normal'>
+          {`is a community-driven \nDigital Garden`}
+        </span>
+        <p className='mt-6 text-base text-accent sm:whitespace-pre-line md:text-xl md:font-semibold md:text-neutral-3 lg:text-accent'>
+          {`A space for people ro create, curate, cultivate and discuss content \nrelated to the Decentralize web`}
+        </p>
+        <div className='mt-16'>
+          <span className='block text-2xl font-semibold text-neutral-1 underline'>
+            Community Goals
           </span>
-          <p className='mt-6 text-base text-accent sm:whitespace-pre-line md:text-xl md:font-semibold md:text-neutral-3 lg:text-accent'>
-            {`A space for people ro create, curate, cultivate and discuss content \nrelated to the Decentralize web`}
-          </p>
-          <div className='mt-16'>
-            <span className='block text-2xl font-semibold text-neutral-1 underline'>
-              Community Goals
-            </span>
-            <div className='mt-6 grid grid-cols-1 gap-y-6 md:grid-cols-3'>
-              {communityGoals.map((goal, key) => (
-                <p
-                  className='text-sm text-neutral-2 lg:whitespace-pre-line'
-                  key={key}
-                >
-                  {goal}
-                </p>
-              ))}
-            </div>
+          <div className='mt-6 grid grid-cols-1 gap-y-6 md:grid-cols-3'>
+            {communityGoals.map((goal, key) => (
+              <p
+                className='text-sm text-neutral-2 whitespace-pre-line md:whitespace-normal lg:whitespace-pre-line'
+                key={key}
+              >
+                {goal}
+              </p>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Section 2 */}
+      {/* Section 3 */}
       <div className='bg-primary-light text-center py-16 px-6 md:py-20 md:px-8 lg:p-28'>
         <div>
           <span className='text-3xl text-neutral-1 font-semibold md:text-4xl'>
@@ -141,8 +149,8 @@ const About: React.FC<{}> = () => {
         </div>
       </div>
 
-      {/* Section 3 */}
-      <div className='bg-primary py-16 px-6 md:py-20 md:px-8 lg:p-28 text-center'>
+      {/* Section 4 */}
+      <div className='bg-primary text-center py-16 px-6 md:py-20 md:px-8 lg:p-28'>
         <span className='text-neutral-1 text-4xl font-semibold'>#</span>{' '}
         <span className='text-accent text-4xl font-semibold'>Why join ?</span>
         <div className='mt-12 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-6 lg:mt-24 lg:gap-20'>

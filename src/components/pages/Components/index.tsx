@@ -48,7 +48,6 @@ import {
   TwitterIcon,
 } from '../../Icon';
 import { tableOfContents, collapseToggle } from './mock';
-import { title } from 'process';
 
 const Components: React.FC<{}> = () => {
   return (
