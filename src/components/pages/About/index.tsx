@@ -108,19 +108,15 @@ const About: React.FC<{}> = () => {
             Digital Garden
           </span>
         </div>
-        <p className='mt-6 text-base text-neutral-2'>
-          It is a public space of information where seeds of thought are
-          growing. it's about writing and creating process-oriendted networking
-          content.
+        <p className='mt-6 text-neutral-2 text-sm md:text-base md:whitespace-pre-line'>
+          {`A digital garden is a public space of information where seeds of thought are growing. It's \nabout writing and creating process-oriented networking cotntent.`}
         </p>
-        <div className='mt-6 mb-12 text-sm'>
+        <div className='mt-6 mb-12'>
           <span className='text-sm font-normal text-accent md:text-base md:font-semibold'>
             Garden
           </span>{' '}
-          <p className='inline text-sm font-normal text-neutral-3 md:text-base md:font-semibold'>
-            is a place where thungs grow in public we plant seeds and allow
-            visitors to nurture plants and pull weeds to exploring new
-            experiences.
+          <p className='inline text-sm font-normal text-neutral-2 md:text-base md:font-semibold lg:whitespace-pre-line'>
+            {`is a place where thungs grow in public we plant seeds and allow visitors to nurture \nplants and pull weeds to exploring new experiences.`}
           </p>
         </div>
         <IdeaPotIcon className='inline' />
