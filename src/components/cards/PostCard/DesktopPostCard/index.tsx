@@ -16,18 +16,18 @@ const DesktopPostCard: React.FC<IPostCard> = ({
       <div className='flex flex-col justify-between h-full w-4/6 pr-4'>
         <div className='space-y-2'>
           <Contributor users={users} />
-          <span className='block text-xl font-semibold text-neutral-1 line-clamp-2'>
+          <span className='block text-xl font-semibold text-neutral-100 line-clamp-2'>
             {title}
           </span>
-          <span className='block text-sm font-normal text-neutral-3 line-clamp-2'>
+          <span className='block text-sm font-normal text-neutral-400 line-clamp-2'>
             {description}
           </span>
         </div>
         <div className='flex items-center'>
-          <span className='text-xs text-neutral-3 font-normal'>
+          <span className='text-xs text-neutral-400 font-normal'>
             {publishedAt}
           </span>
-          <div className='w-0.5 h-0.5 rounded-full bg-neutral-4 mx-2' />
+          <div className='w-0.5 h-0.5 rounded-full bg-neutral-400 mx-2' />
           <div className='line-clamp-1'>
             {tags.map((tag, key) => (
               <Hashtag

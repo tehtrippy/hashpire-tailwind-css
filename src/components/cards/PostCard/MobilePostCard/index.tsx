@@ -16,21 +16,21 @@ const MobilePostCard: React.FC<IMobilePostCard> = ({
       <div className='flex flex-col justify-between w-3/4 pr-2'>
         <div>
           <Contributor users={users} />
-          <span className='block mt-2 text-base font-semibold text-neutral-1 line-clamp-2'>
+          <span className='block mt-2 text-base font-semibold text-neutral-100 line-clamp-2'>
             {title}
           </span>
           <div className='line-clamp-1 mt-2'>
             {tags.map((tag, key) => (
               <span
                 key={key}
-                className='mr-2 text-xs text-neutral-3 font-normal'
+                className='mr-2 text-xs text-neutral-400 font-normal'
               >
                 #{tag.name}
               </span>
             ))}
           </div>
         </div>
-        <span className='block text-xs text-neutral-3 font-normal mt-2'>
+        <span className='block text-xs text-neutral-400 font-normal mt-2'>
           {publishedAt}
         </span>
       </div>

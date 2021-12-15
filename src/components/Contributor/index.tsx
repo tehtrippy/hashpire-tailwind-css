@@ -16,7 +16,7 @@ const Contributor: React.FC<IContributor> = ({ users }) => {
             alt={displayName}
             className='mr-2'
           />
-          <span className='text-xs font-semibold text-neutral-1'>
+          <span className='text-xs font-semibold text-neutral-100'>
             {displayName}
           </span>
         </div>
@@ -32,7 +32,7 @@ const Contributor: React.FC<IContributor> = ({ users }) => {
                     className={key > 0 ? '-ml-2' : undefined}
                   />
                   {key === 4 && (
-                    <div className='flex items-center justify-center relative w-7 h-7 bg-primary-light border border-neutral-1 rounded-full text-xs text-neutral-3 -ml-2'>
+                    <div className='flex items-center justify-center relative w-7 h-7 bg-background border border-neutral-100 rounded-full text-xs text-neutral-400 -ml-2'>
                       <span>+{users.length - 5}</span>
                     </div>
                   )}

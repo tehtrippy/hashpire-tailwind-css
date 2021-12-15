@@ -15,12 +15,12 @@ interface IDropdownMenu {
 const DropdownMenu: React.FC<IDropdownMenu> = ({ menu }) => {
   const { title, menuItem } = menu;
   return (
-    <Menu as='div' className='relative text-sm text-neutral-2'>
-      <Menu.Button className='flex items-center font-semibold group hover:text-accent'>
+    <Menu as='div' className='relative text-sm text-neutral-200'>
+      <Menu.Button className='flex items-center font-semibold group hover:text-primary'>
         {title}
-        <CaretDownIcon className='ml-2 text-neutral-2 group-hover:text-accent' />
+        <CaretDownIcon className='ml-2 text-neutral-200 group-hover:text-primary' />
       </Menu.Button>
-      <Menu.Items className='absolute left-0 w-40 mt-5 p-3 bg-primary-light rounded-lg shadow-popup'>
+      <Menu.Items className='absolute left-0 w-40 mt-5 p-3 bg-background rounded-lg shadow-popup'>
         {menuItem.map((item, key) => (
           <Menu.Item key={key}>
             <Link title={item.title} />

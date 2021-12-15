@@ -11,7 +11,7 @@ const ProfileImage: React.FC<IProfileImage> = ({ src, alt, className }) => {
     <img
       src={src}
       alt={alt}
-      className={`w-7 h-7 rounded-full object-cover border border-neutral-1 ${className}`}
+      className={`w-7 h-7 rounded-full object-cover border border-neutral-100 ${className}`}
     />
   );
 };

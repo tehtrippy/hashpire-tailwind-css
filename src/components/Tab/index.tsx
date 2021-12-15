@@ -6,7 +6,7 @@ const items = [<HomeIcon />, <CommunityIcon />, <IdeaIcon />];
 
 const Tab: React.FC<{}> = () => {
   return (
-    <div className='px-12 py-4 flex justify-between bg-primary'>
+    <div className='px-12 py-4 flex justify-between bg-background-darker'>
       {items.map((item, key) => (
         <TabItem key={key}>{item}</TabItem>
       ))}

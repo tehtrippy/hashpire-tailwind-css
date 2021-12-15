@@ -4,16 +4,16 @@ module.exports = {
   // mode: "jit",
 
   // primary = background-darker
-  // primary-light = background
-  // secondary = neutral-100
-  // accent = primary
-  // accent-pressed = primary-dark
-  // accent-focus = primary (opacity 20%)
-  // neutral-1 = neutral-100
-  // neutral-2 = neutral-200
-  // neutral-3 = neutral-400
-  // neutral-4 = neutral-500
-  // neutral-5 = neutral-900
+  // background = background
+  // neutral-100 = neutral-10000
+  // primary = primary
+  // primary-dark = primary-dark
+  // primary-focus = primary (opacity 20%)
+  // neutral-100 = neutral-10000
+  // neutral-200 = neutral-20000
+  // neutral-400 = neutral-400
+  // neutral-400 = neutral-400
+  // neutral-900 = neutral-900
 
   theme: {
     extend: {

@@ -18,7 +18,7 @@ const Garden: React.FC<{}> = () => {
         <div className='mx-2 my-2' key={key}>
           <Hashtag
             title={item}
-            className='h-6 py-1 px-2.5 rounded-2xl bg-neutral-5 border-neutral-5 hover:border-accent hover:text-accent focus:border-accent-pressed focus:outline-btnFocus focus:text-accent-pressed'
+            className='h-6 py-1 px-2.5 rounded-2xl bg-neutral-900 border-neutral-900 hover:border-primary hover:text-primary focus:border-primary-dark focus:outline-btnFocus focus:text-primary-dark'
           />
         </div>
       ))}

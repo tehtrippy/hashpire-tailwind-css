@@ -6,7 +6,7 @@ interface ILink {
 
 const Link: React.FC<ILink> = ({ title }) => {
   return (
-    <button className='text-sm font-semibold hover:text-accent group-hover:text-accent focus:text-accent-pressed'>
+    <button className='text-sm font-semibold hover:text-primary group-hover:text-primary focus:text-primary-dark'>
       {title}
     </button>
   );

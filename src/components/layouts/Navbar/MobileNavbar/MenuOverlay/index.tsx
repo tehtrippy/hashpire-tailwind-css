@@ -26,7 +26,7 @@ const MenuOverlay: React.FC<IMenuOverlay> = ({
         leave='transition ease-in-out duration-300 transform'
         leaveFrom='translate-x-0'
         leaveTo='-translate-x-full'
-        className='flex flex-col absolute top-0 bg-neutral-5 min-h-screen w-10/12 md:w-8/12'
+        className='flex flex-col absolute top-0 bg-neutral-900 min-h-screen w-10/12 md:w-8/12'
       >
         <div className='h-16 flex items-center justify-between px-6'>
           {topLeftContent}

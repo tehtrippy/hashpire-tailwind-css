@@ -13,18 +13,18 @@ interface IPageLink {
 
 const PageLink: React.FC<IPageLink> = ({ moc, linkPage }) => {
   return (
-    <div className='bg-neutral-5 rounded-lg'>
+    <div className='bg-neutral-900 rounded-lg'>
       <Disclosure>
         {({ open }) => (
           <>
             <Disclosure.Button className='flex justify-between items-center w-full px-4 py-2'>
-              <span className='text-sm font-medium text-neutral-1'>
+              <span className='text-sm font-medium text-neutral-100'>
                 Relationship to this page
               </span>
               {open ? (
-                <CaretDownIcon className='text-neutral-1 h-8 w-8' />
+                <CaretDownIcon className='text-neutral-100 h-8 w-8' />
               ) : (
-                <CaretRightIcon className='text-neutral-1 h-8 w-8' />
+                <CaretRightIcon className='text-neutral-100 h-8 w-8' />
               )}
             </Disclosure.Button>
             {(moc || linkPage) && (

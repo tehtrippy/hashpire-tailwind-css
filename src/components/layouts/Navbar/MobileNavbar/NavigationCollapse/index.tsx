@@ -16,19 +16,19 @@ const NavigationCollapse: React.FC<INavigationCollapse> = ({ className }) => {
           <>
             <Disclosure.Button
               className={`w-full flex justify-between items-center px-4 py-1.5 text-base font-semibold rounded-lg
-              ${open ? 'text-accent bg-primary' : 'text-neutral-2'}`}
+              ${open ? 'text-primary bg-primary' : 'text-neutral-200'}`}
             >
               <span>Garden</span>
               {open ? (
-                <CaretDownIcon className='text-accent' />
+                <CaretDownIcon className='text-primary' />
               ) : (
-                <CaretRightIcon className='text-neutral-1' />
+                <CaretRightIcon className='text-neutral-100' />
               )}
             </Disclosure.Button>
             <Disclosure.Panel className='flex flex-col'>
               {items.map((item, key) => (
                 <span
-                  className='inline-block px-10 py-1.5 mt-2 rounded-lg text-base font-semibold text-neutral-2 hover:text-accent'
+                  className='inline-block px-10 py-1.5 mt-2 rounded-lg text-base font-semibold text-neutral-200 hover:text-primary'
                   key={key}
                 >
                   {item.title}

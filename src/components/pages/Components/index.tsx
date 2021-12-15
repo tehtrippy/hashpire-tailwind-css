@@ -53,10 +53,10 @@ const Components: React.FC<{}> = () => {
   return (
     <div className='bg-black p-6 space-y-6'>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Icons
         </span>
-        <div className='flex space-x-2 text-neutral-1'>
+        <div className='flex space-x-2 text-neutral-100'>
           <CaretUpIcon />
           <CaretDownIcon />
           <CaretLeftIcon />
@@ -84,25 +84,25 @@ const Components: React.FC<{}> = () => {
         </div>
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Navbar
         </span>
         <Navbar />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Main Page Footer
         </span>
         <MainPageFooter />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Side Panel Footer
         </span>
         <SidePanelFooter />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Hashtag Button
         </span>
         <Hashtag title='force' className='mr-2 h-8 py-1.5 px-4 rounded-3xl' />
@@ -112,21 +112,21 @@ const Components: React.FC<{}> = () => {
         />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Link Button
         </span>
-        <div className='text-neutral-1'>
+        <div className='text-neutral-100'>
           <Link title='Go to garden' />
         </div>
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Badge
         </span>
         <Badge title='Sponsor' />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Contributor
         </span>
         <Contributor
@@ -235,7 +235,7 @@ const Components: React.FC<{}> = () => {
         />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Post Card
         </span>
         <PostCard
@@ -280,7 +280,7 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           MOC Card
         </span>
         <MocCard
@@ -319,7 +319,7 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-12'>
+        <span className='block text-primary text-2xl font-semibold mb-12'>
           Contributor Card
         </span>
         <ContributorCard
@@ -337,7 +337,7 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Tooltip
         </span>
         <Tooltip>
@@ -366,7 +366,7 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         </Tooltip>
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Side Page Link
         </span>
         <SidePageLink
@@ -378,7 +378,7 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           MOC Library
         </span>
         <MocLibrary
@@ -390,7 +390,7 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Page Link
         </span>
         <PageLink
@@ -411,44 +411,44 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Pagination (เขียนไม่ได้ตาม Design ครับ)
         </span>
         <img src={paginationGuide} alt='pagiantion' />
         <Pagination />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Collapse Toggle
         </span>
         <CollapseToggle data={collapseToggle} showItemsCount />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Table of contents
         </span>
         <TableOfContent data={tableOfContents} />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Relation to this page
         </span>
         <RelationToPage data={tableOfContents} />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Tab
         </span>
         <Tab />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Search
         </span>
         <Search />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Header
         </span>
         <Header title='📌 Feature MOCs' />
@@ -456,13 +456,13 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         <Header title='📝 ALL NOTES' />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Page Header
         </span>
         <PageHeader title='Contributors' />
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Layout
         </span>
         <Layout>
@@ -472,7 +472,7 @@ Laborum do non commodo ipsum adipisicing elit. Incididunt Lorem velit aute sint 
         </Layout>
       </div>
       <div className='bg-gray-700 py-4 px-4'>
-        <span className='block text-accent text-2xl font-semibold mb-3'>
+        <span className='block text-primary text-2xl font-semibold mb-3'>
           Garden Layout
         </span>
         <GardenLayout

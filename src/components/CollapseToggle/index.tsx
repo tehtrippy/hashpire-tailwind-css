@@ -20,9 +20,9 @@ const CollapseToggle: React.FC<ICollapseToggle> = ({
     return (
       <Disclosure.Button>
         {renderDownIcon ? (
-          <TriangleDownIcon className='text-accent h-4 w-4' />
+          <TriangleDownIcon className='text-primary h-4 w-4' />
         ) : (
-          <TriangleRightIcon className='text-neutral-1 h-4 w-4' />
+          <TriangleRightIcon className='text-neutral-100 h-4 w-4' />
         )}
       </Disclosure.Button>
     );
@@ -34,7 +34,7 @@ const CollapseToggle: React.FC<ICollapseToggle> = ({
   ) => {
     const lengthOfChildren = item.children?.length;
     return (
-      <div className='flex items-center justify-between px-3 py-1 rounded  text-sm font-normal hover:bg-accent-focus hover:bg-opacity-20'>
+      <div className='flex items-center justify-between px-3 py-1 rounded  text-sm font-normal hover:bg-primary hover:bg-opacity-20'>
         <div className='flex items-center'>
           {lengthOfChildren && renderTriangleDownIcon(open)}
           <span className={`${!lengthOfChildren ? 'ml-7' : 'ml-3'}`}>
@@ -42,7 +42,7 @@ const CollapseToggle: React.FC<ICollapseToggle> = ({
           </span>
         </div>
         {showItemsCount && lengthOfChildren && (
-          <div className='flex items-center bg-neutral-5 px-1.5 py-0.5 rounded'>
+          <div className='flex items-center bg-neutral-900 px-1.5 py-0.5 rounded'>
             {lengthOfChildren}
           </div>
         )}
@@ -51,7 +51,7 @@ const CollapseToggle: React.FC<ICollapseToggle> = ({
   };
 
   return (
-    <div className={`flex flex-col space-y-2 text-neutral-1 ${className}`}>
+    <div className={`flex flex-col space-y-2 text-neutral-100 ${className}`}>
       {data.map((item, key) => (
         <Disclosure key={key}>
           {({ open }) => (

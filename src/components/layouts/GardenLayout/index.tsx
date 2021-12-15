@@ -21,7 +21,7 @@ const GardenLayout: React.FC<IGardenLayout> = ({
     <>
       <div className='hidden lg:block'>
         <Navbar />
-        <div className='h-content flex bg-primary-light'>
+        <div className='h-content flex bg-background'>
           <LeftContent>{leftContent}</LeftContent>
           <RightCotnent
             right25Content={right25Content}

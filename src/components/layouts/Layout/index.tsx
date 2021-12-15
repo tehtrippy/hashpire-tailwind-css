@@ -8,7 +8,7 @@ interface ILayout {
 
 const Layout: React.FC<ILayout> = ({ children, fullWidth }) => {
   return (
-    <div className='min-h-screen flex flex-col justify-center bg-primary-light'>
+    <div className='min-h-screen flex flex-col justify-center bg-background'>
       <Navbar />
       <div
         className={`flex-grow ${

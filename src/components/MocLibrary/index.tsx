@@ -9,13 +9,13 @@ const MocLibrary: React.FC<IMocLibrary> = ({ items }) => {
   return (
     <div>
       <div className='flex items-center'>
-        <FolderIcon className='text-neutral-4 w-8 h-8' />
-        <span className='text-neutral-4 text-base font-semibold ml-2'>
+        <FolderIcon className='text-neutral-400 w-8 h-8' />
+        <span className='text-neutral-400 text-base font-semibold ml-2'>
           MOC Library
         </span>
       </div>
       {items.map((item, key) => (
-        <div className='mt-4 text-sm text-neutral-1 font-normal' key={key}>
+        <div className='mt-4 text-sm text-neutral-100 font-normal' key={key}>
           {item.title}
         </div>
       ))}
